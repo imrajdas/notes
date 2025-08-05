@@ -1,0 +1,21 @@
+name: Sample Build
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Sample Build Step
+        run: |
+          echo "Starting build..."
+          # Simulate build
+          sleep 5
+          echo "Build complete. Exiting."
